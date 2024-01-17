@@ -2,3 +2,15 @@
   margin: 0px;
   padding: 0px;
 }
+
+@font-face {
+  font-family: 'inter';
+  src: url('./fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+a,h1,p,text,button,input,input::placeholder,h2,h3,h4,dialog{
+  font-family: 'inter';
+}
+a,button{
+  cursor: pointer;
+}

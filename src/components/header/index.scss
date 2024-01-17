@@ -1,0 +1,141 @@
+.header-main{
+    position: fixed;
+    color: black;
+    width: calc(100% - 80px);
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 40px;
+    &::after{
+        z-index: -1;
+        position: absolute;
+        content: '';
+        background-color: black;
+        border-radius: 2px;
+        top: 75px;
+        bottom: 9px;
+        left: 40px;
+        right: 40px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    >div{
+        height: 90%;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        .link-box{
+            height: 100%;
+            display: flex;
+            position: relative;
+            align-items: center;
+            >a{
+                position: relative;
+                transition: all .5s ease-in-out;
+                &:hover{
+
+                    &::after{
+                        transform: scaleX(1);
+                        transition: all .5s ease-in-out;
+                    }
+                    transition: all .5s ease-in-out;
+                }
+                &::after{
+                    position: absolute;
+                    background-color: black;
+                    content: '';
+                    position: absolute;
+                    top: calc(100% + 4px);
+                    bottom: -5px;
+                    left: 0px;
+                    right: 0px;
+                    transition: all .5s ease-in-out;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                }
+            }
+            &:hover{
+                transition: all .5s ease-in-out;
+                >a{
+                    &::after{
+                        transform: scaleX(1);
+                        transition: all .5s ease-in-out;
+                    }
+                    transition: all .5s ease-in-out;
+                }
+                div{
+                    transition: all .5s ease-in-out;
+                    width: 200px;
+                    height: 100px;
+                    padding: 10px;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    color: black;
+                    a{
+                        color: black;
+                        &:hover{
+                            color: red;
+                        }
+                    }
+                }
+            }
+            >div{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                transition: all .5s ease-in-out;
+                height: 0px;
+                width: 200px;
+                padding: 0px;
+                overflow: hidden;
+                color: white;
+                background-color: white;
+                top: 85%;
+                right: -100%;
+                position: absolute;
+                border-radius: 5px;
+                transform-origin: left;
+            }
+        }
+        .link-bigger-box{
+            a:last-child{
+                position: relative;
+                border: 1px solid black;
+                padding: 10px;
+                border-radius: 5px;
+                color: black;
+                transition: all .5s ease-in-out;
+                &:hover{
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    transition: all .5s ease-in-out;
+                    color: white;
+                    &::before{
+                        transform: scaleX(1);
+                        transition: all .5s ease-in-out;
+                    }
+                }
+                &::before{
+                    z-index: -1;
+                    position: absolute;
+                    background-color: black;
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0px;
+                    right: 0px;
+                    transform: scaleX(0);
+                    transition: all .5s ease-in-out;
+                    transform-origin: left;
+                }
+                &::after{
+                    background-color: unset;
+                }
+            }
+        }
+       
+    }
+}
